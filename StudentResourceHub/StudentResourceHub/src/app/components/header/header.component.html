@@ -1,0 +1,43 @@
+<header class="bg-dark text-white">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <h1>Student Resource Hub</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/categories/programming">Programming</a></li>
+              <li><a class="dropdown-item" routerLink="/categories/design">Design</a></li>
+              <li><a class="dropdown-item" routerLink="/categories/math">Math</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="about" routerLinkActive="active">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="add-resource" routerLinkActive="active">Add Resource</a>
+          </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/register" routerLinkActive="active">Register</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+   

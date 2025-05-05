@@ -1,0 +1,7 @@
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }

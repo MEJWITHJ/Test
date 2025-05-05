@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <h2>{{ categoryName }} Resources</h2>
+    
+    <div [ngSwitch]="categoryName">
+      <p *ngSwitchCase="'Programming'">
+        Explore our collection of programming tutorials, guides, and reference materials.
+      </p>
+      <p *ngSwitchCase="'Design'">
+        Discover resources for UI/UX design, graphic design, and web design principles.
+      </p>
+      <p *ngSwitchCase="'Math'">
+        Find helpful mathematics tutorials and reference materials for various topics.
+      </p>
+      <p *ngSwitchDefault>
+        Browse resources in this category.
+      </p>
+    </div>
+    
+    <app-resource-list [resources]="resources"></app-resource-list>
+  </div>

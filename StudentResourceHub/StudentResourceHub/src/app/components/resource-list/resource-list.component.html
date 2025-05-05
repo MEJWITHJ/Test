@@ -1,0 +1,16 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 mt-1">
+  <div class="card text-white bg-dark border-secondary min-vh-50" *ngFor="let resource of resources">
+    <div class="card-header border-secondary">{{ resource.category }}</div>
+    <div class="card-body bg-secondary text-white ">
+      <h4 class="card-title">{{ resource.title }}</h4>
+      <p class="card-text">{{ resource.description }}</p>
+      <p class="card-text"><small>Author: {{ resource.author }}</small></p>
+    </div>
+    <div class="card-footer border-secondary">
+      <a [routerLink]="['/resource', resource.id]" class="btn bg-secondary text-white">View Details</a> 
+    </div>
+  </div>
+</div>
+<div *ngIf="resources.length === 0" class="alert alert-info mt-1">
+    No resources found.
+</div>

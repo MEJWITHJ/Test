@@ -1,0 +1,39 @@
+<div class="container mt-4">
+    <div *ngIf="resource; else notFound">
+      <h2>{{ resource.title }}</h2>
+      <span class="badge bg-primary mb-3">{{ resource.category }}</span>
+      
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5>Description</h5>
+          <p>{{ resource.description }}</p>
+          
+          <h5>Details</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>URL:</strong> 
+              <a [href]="resource.url" target="_blank" [class.text-danger]="!isValidUrl">{{ resource.url }}</a>
+            </li>
+            <li class="list-group-item"><strong>Author:</strong> {{ resource.author }}</li>
+            <li class="list-group-item"><strong>Published:</strong> {{ resource.publicationDate | date }}</li>
+            <li class="list-group-item">
+              <strong>Featured:</strong> 
+              <span [ngClass]="resource.isFeatured ? 'text-success' : 'text-secondary'">
+                {{ resource.isFeatured ? 'Yes' : 'No' }}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <button class="btn btn-primary" (click)="goBack()">Back to List</button>
+    </div>
+    
+    <ng-template #notFound>
+      <div class="alert alert-danger">
+        Resource not found.
+      </div>
+      <button class="btn btn-secondary" (click)="goBack()">Back to List</button>
+    </ng-template>
+  </div>
+  

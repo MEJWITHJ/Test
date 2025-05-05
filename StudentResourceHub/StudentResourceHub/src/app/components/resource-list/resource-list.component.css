@@ -1,0 +1,12 @@
+.row{
+    display: inline-flex;
+    max-width: 100rem;
+    margin: 10rem auto;
+}
+.card{
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
